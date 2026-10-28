@@ -32,3 +32,7 @@ class MovieSerializer(serializers.ModelSerializer):
             "genres",
             "duration",
         )
+        extra_kwargs = {
+            "actors": {"required": False, "allow_empty": True},
+            "genres": {"required": False, "allow_empty": True},
+        }
